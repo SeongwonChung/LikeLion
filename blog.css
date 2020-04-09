@@ -1,0 +1,101 @@
+* {
+  margin : 0 auto;
+  padding : 0;
+  
+}
+body {
+  
+  background-color: burlywood;
+  font-family: 'Nanum Gothic';
+  margin: 10px auto;
+}
+
+.font_default {
+  font-size: 24px;
+  font-style: normal;
+}
+
+.header_title {
+  width: 80%;
+  height: 30%;
+  padding: 20px;
+  margin: 10px auto;
+  border-style: double;
+  border-radius: 24px;
+  text-align: center;
+  background-color: lemonchiffon;
+  font-size: 60px;
+  font-weight: 800;
+}
+.intro {
+  text-align: center;
+  box-sizing: border-box;
+  width: 50%;
+  height: 40%;
+  margin: 10px auto;
+  padding: 60px;
+  border: 2px; 
+  border-style: none;
+  border-radius: 24px;
+  
+  
+
+}
+.intro span {
+  color: salmon;
+  font-weight: 700;
+}
+.food {
+  width: 1000px;
+  height: 400px;
+  border: 2px;
+  border-color: lemonchiffon;
+  border-style: solid;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 40px 60px;
+}
+.food_title {
+  width: 200px;
+  height: 30px;
+  padding: 14px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  background-color: lemonchiffon;
+  border-radius: 10px;
+  border-style: double;
+
+}
+.food figure {
+  display: inline-grid;
+  margin: 60px;
+  
+}
+.food img {
+  border-style: dashed;
+  border-radius: 10px;
+  border-color: salmon;
+  width: 200px;
+  height: 200px;
+}
+.food span {
+  font-size: 30px;
+  font-weight: 700;
+}
+.SNS {
+  width: 1000px;
+  font-size: 18px;
+  margin: 20px auto;
+  padding: 40px;
+  border: solid;
+  border-radius: 10px;
+  border-color: salmon;
+  text-align: center;
+}
+
+.SNS_logo {
+  width: 29px;
+  height: 29px;
+}
