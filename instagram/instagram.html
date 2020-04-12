@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./instagram.css" rel="stylesheet"/>
+  
+  <!--icon link-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>정성원(@swwrking) · Instagram 사진 및 동영상</title>
+</head>
+<body>
+  <header>
+    <div class="header_content">
+      <div class="logo"><img src="instagram_logo.png"/></div>
+      <div class="search">
+      
+        <span id="search_icon" class="material-icons">
+          search
+        </span>
+             
+        <input type = "search" id = "search" 
+      placeholder = "검색"> 
+      </div>
+      <div class="head_nav">
+        <nav class="header_nav">
+          <button>
+            <span class="material-icons md-22">
+              home
+            </span>
+        
+          </button>
+          <button>
+            <span class="material-icons md-22">
+            send
+            </span>
+          </button>
+          <button>
+            <span class="material-icons md-22">
+              explore
+              </span>
+          </button>
+          <button>
+            <span class="material-icons md-22">
+             favorite
+              </span>
+          </button>
+          <button class="img_icon">
+            <img id = "profile_nav" src="images/profile_image.jpg"/>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <!--profile-->
+    <div class="profile">
+      <div class="profile_image" >
+        <img src="images/profile_image.jpg"/>
+      </div>
+      
+      <div class="profile_content">
+        
+        <div class="username pf_line">
+          <span id="username">swwrking</span>
+          <button id="profile_edit">프로필 편집</button>
+          <button id="settings">
+            <span class="material-icons">
+              settings
+            </span>
+          </button>
+        </div>
+
+        <ul class="profile_count pf_line">
+          <li>게시물 <span>8</span></li>
+          <li>팔로워 <span>176</span></li>
+          <li class="nomargin">팔로우 <span>416</span></li>
+        </ul>
+        
+        <div class="profile_info pf_line nomargin">
+          <p>정성원</p>
+        </div>
+      
+      </div>
+    </div>
+    <!--게시물-->
+    <article>
+      <nav class="content_nav">
+        <a class="selected">
+          <span class="material-icons md-12">
+            grid_on
+            </span>
+          <span class="feature">게시물</span>
+        </a>
+        <a>
+          <span class="material-icons md-12">
+            live_tv
+            </span>
+          <span class="feature">IGTV</span>
+        </a>
+        <a>
+          <span class="material-icons md-12">
+            bookmark_border
+            </span>
+          <span class="feature">저장됨</span>
+        </a>
+        <a>
+          <span class="material-icons md-12">
+            assignment_ind
+            </span>
+          <span class="feature">태그됨</span>
+        </a>
+      </nav>
+
+      <div class="content_box">
+        <div class="content_line">
+          <img src="images/mili.jpg"/>
+          <img src="images/zzimddak.jpg"/>
+          <img src="images/matcha.jpg"/>
+        </div>
+        <div class="content_line">
+          <img src="images/harry.jpg"/>
+          <img src="images/carbo.jpg"/>
+          <img src="images/jordan.jpg"/>
+        </div>
+        <div class="content_line last">
+          <img src="images/bunker.jpg"/>
+          <img src="images/konban.jpg"/>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+  <footer>
+    <nav class="extra">
+      <ul>
+        <li>소개</li>
+        <li>도움말</li>
+        <li>홍보 센터</li>
+        <li>API</li>
+        <li>채용 정보</li>
+        <li>개인정보처리방침</li>
+        <li>약관</li>
+        <li>위치</li>
+        <li>인기 계정</li>
+        <li>해시태그</li>
+        <li>언어</li>
+      </ul>
+    </nav>
+    <span class="copyright">@ 2020 INSTAGRAM CLONE BY SeongwonChung</span>
+  </footer>
+</body>
+</html>
