@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "fb_clone.css" rel = "stylesheet"/>
+  
+  <!-- link for icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Facebook</title>
+</head>
+<body>
+  <div class="top">
+    <div class="top__header">
+      <div class="top__header__logo">
+        <img id=fb_logo src="images/fb_logo.png"/>
+      </div>
+      <div class= "top__header__nav">
+        <button class="top__header__nav__button">
+          <span class="material-icons">
+            search
+          </span>            
+        </button>
+        <button class="top__header__nav__button">
+          <span class="material-icons">
+            offline_bolt
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="top__story">
+      <div class="top__story__box">
+        <div class="top__story__box__top">
+          <img class ="top__story__box__top__img" src="images/fb_default_pic.jpg"/>
+        </div>
+        <div class="top__story__box__add">
+          <span class="material-icons md-30 blue">
+            add_circle
+          </span>
+        </div>
+        <div class="top__story__box__bottom">
+          <span>스토리 만들기</span>
+        </div>
+      </div>
+      <div class="top__story__box">
+        <img id ="hb_story" src="images/hypebeast_story.jpg"/>
+      </div>
+      <div class="top__story__box top__story__box--cover">
+        <div class="top__story__box__pf">
+          <img class="top__story__box__pf__img"src="images/hypebeast_page_profile.jpg"/>
+        </div>      
+        <div class="top__story__box__pagename">
+          <span>HYPEBEAST</span>
+        </div>
+      </div>
+    </div>
+    <div class="top__upload">
+      <div class="top__upload__box">
+        <div class="top__upload__box__pf">
+          <img src="images/fb_default_pic.jpg"/>
+        </div>
+        <div class="top__upload__box__input">
+          <input placeholder="무슨 생각을 하고 계신가요?"/>
+        </div>
+      </div>
+      <div class="top__upload__menu">
+        <div class= "top__upload__menu__bar">
+          <button class= "top__upload__menu__bar__button">
+            <span class="material-icons md-18 live">
+              videocam
+            </span>
+            <span>라이브</span>
+          </button>
+          <button class= "top__upload__menu__bar__button top__upload__menu__bar__button--mid">
+            <span class="material-icons md-18 green">
+              photo_library
+            </span>
+            <span>사진</span>
+          </button>
+          <button class= "top__upload__menu__bar__button">
+            <span class="material-icons md-18 check">
+              location_on
+            </span>
+            <span>체크인</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+
+  <div class="contents">
+    <div class="contents__box">
+      <div class="contents__box__profile">
+        <div class="contents__box__profile__pic">
+          <img src="images/IU_page_profile.jpg"/>
+        </div>
+        <div class="contents__box__profile__text">
+          <p>아이유는 아이가 아니에유</p>
+          <p class="subtext">4월 23일 오후 8:38 ·
+            <span class="material-icons md-12 grey">
+            public
+            </span>
+          </p>
+        </div>
+        <div class="contents__box__profile__option">
+          <span class="material-icons grey">
+            more_horiz
+          </span>
+        </div>
+      </div>
+      <div class="contents__box__text">
+        <p>20200423 아이유 인스타그램 스토리 업데이트</p>
+        <br><br>
+        <p>아이유 인스타그램...<span class="subtext">더 보기</span></p>
+      </div>
+      <div class="contents__box__photobox">
+        <div class="contents__box__photobox__main">
+          <img src="images/IU_1.jpg"/>
+        </div>
+        <div class="contents__box__photobox__sub">
+          <img src="images/IU_2.jpg"/>
+          <img src="images/IU_3.jpg"/>
+          <div class="last_pic">
+            <img src="images/IU_4.jpg"/>
+            <div class="last_pic__cover">
+              <span >9개 이상</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents__box__footer">
+        <div class="contents__box__footer__info">
+          <div class="contents__box__footer__info__likes">
+            <div class="contents__box__footer__info__circle circle--blue">
+              <span class="material-icons md-10 white">
+                thumb_up
+              </span>
+            </div>
+            <div class="contents__box__footer__info__circle circle--pink">
+              <span class="material-icons md-10 white">
+                favorite
+              </span>
+            </div>   
+            <span>3,503개</span> 
+          </div>
+          <div class="contents__box__footer__info__comment_share">
+            <span>댓글 109개</span>
+            <span>공유 52회</span>
+            <div class="contents__box__footer__info__circle">
+              <img src="images/fb_default_pic.jpg"/>
+            </div>
+            <span class="material-icons md-16" id="arrow_down">
+              arrow_drop_down
+            </span>
+          </div> 
+        </div>
+        <div class="contents__box__footer__menu">
+          <div class="contents__box__footer__menu__button">
+            <span class="material-icons">
+              thumb_up
+            </span>
+            <span class="left_margin">좋아요</span>
+          </div>
+          <div class="contents__box__footer__menu__button">
+            <span class="material-icons">
+              chat_bubble_outline
+            </span>
+            <span class="left_margin">댓글 달기</span>
+          </div>
+          <div class="contents__box__footer__menu__button">
+            <span class="material-icons">
+              reply
+            </span>
+            <span class="left_margin">공유하기</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bottom">
+    <nav class="bottom__nav">
+      <div class="bottom__nav__button bottom__nav__button--selected">
+        <span class="material-icons md-30 blue">
+          home
+        </span>
+      </div>
+      <div class="bottom__nav__button">
+        <span class="material-icons md-30 grey">
+          ondemand_video
+        </span>
+      </div>
+      <div class="bottom__nav__button">
+        <span class="material-icons md-30 grey">
+          people
+        </span>
+      </div>
+      <div class="bottom__nav__button">
+        <span class="material-icons md-30 grey">
+          outlined_flag
+        </span>
+      </div>
+      <div class="bottom__nav__button">
+        <span class="material-icons md-30 grey">
+          notifications_none
+        </span>
+      </div>
+      <div class="bottom__nav__button">
+        <span class="material-icons md-30 grey">
+          menu
+        </span>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>
