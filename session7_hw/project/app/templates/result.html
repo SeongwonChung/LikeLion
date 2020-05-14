@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result1.css' %}">
+    <title>Result</title>
+    
+</head>
+<body>
+    <div class="text_input">
+        <div class="text_input__box">
+            <p class="text_input__box__heading">글자를 입력해 보세요</p>
+            <div class="text_input__box__textbox">
+                <p class="font_16px">{{text}}</p>
+            </div>
+            <div class="text_input__box__result">
+                <div class="text_input__box__result__list">
+                    <span class="font_20px font_700">공백 포함 : <span class="result_num">{{total_len}}</span>자</span>
+                </div>
+                <div class="text_input__box__result__list">
+                    <span class="font_20px font_700">공백 제외 : <span class="result_num">{{total_len_nospace}}</span>자</span>
+                </div>
+                <div class="text_input__box__result__list">
+                    <span class="font_20px font_700">단어 개수 : <span class="result_num">{{word_count}}</span>개</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

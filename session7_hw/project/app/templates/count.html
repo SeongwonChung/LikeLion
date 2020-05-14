@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+    <title>Count</title>
+</head>
+<body>
+    <div class="text_input">
+        <div class= "text_input__box">
+            <p class="text_input__box__heading">글자를 입력해 보세요</p>
+            <form class="text_input__box__form" action="{% url 'result' %}" method="POST">{% csrf_token %}
+                <textarea class="text_input__box__form__textbox" name="text" cols="60" rows="10"></textarea>
+                
+                <input class="text_input__box__form__submit" type="submit" value="제출하기">
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
