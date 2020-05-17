@@ -1,0 +1,7 @@
+.vscode
+migrations
+db.sqlite3
+__pycache__
+session8.pdf
+Pipfile
+Pipfile.lock

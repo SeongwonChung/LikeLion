@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <select onchange="location = this.value;">
+        <option value = "{%url 'index_i_will_use_in_html' %}">전체 : {{articles_cnt}}</option>
+        <option value = "{%url 'movie_i_will_use_in_html' %}">영화 : {{movie_cnt}}</option>
+        <option value = "{%url 'drama_i_will_use_in_html' %}">드라마: {{drama_cnt}}</option>
+        <option value = "{%url 'entertain_i_will_use_in_html' %}">예능 : {{entertain_cnt}}</option>
+    </select>
+    <br>
+    {% for article in articles %} 
+        <a href="{% url 'detail_i_will_use_in_html' article.pk %}">{{article.title}}</a>
+        <br>
+    {% endfor %}
+    <br>
+    <a href="{% url 'new_i_will_use_in_html' %}">글 쓰러가기</a>
+</body>
+</html>
