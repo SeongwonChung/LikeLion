@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'detail.css' %}">
+    <title>Detail</title>
+</head>
+<body>
+    <div class="box">
+        <div class="box__memo">
+
+            <div class="box__memo__todolist__todo__title">          
+                {{todo.title}}
+            </div>
+            <div class="box__memo__todolist__todo__detail">
+                {{todo.detail}}          
+            </div>
+            <div class="box__memo__todolist__todo__deadline">
+                {{todo.deadline}}
+            </div>
+            <div class="box__memo__todolist__todo__timeleft">
+                {{todo.timeleft}}
+            </div>
+        </div>  
+        <div class = "buttons">
+            <a class="buttons__a" href = "{% url 'home' %}">홈으로</a>
+            <a class="buttons__a" href = "{% url 'edit' todo.pk %}">수정하기</a>
+            <a class="buttons__a" href = "{% url 'delete' todo.pk %}">삭제하기</a>
+        </div>
+    </div>
+</body>
+</html>

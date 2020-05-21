@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href = "{% static 'home.css' %}"> 
+    <title>Home</title>
+</head>
+<body>
+    <div class="box">
+        <p class="box__heading">TODO LIST</p>
+        <li class="box__todolist">
+        {% for todo in todolist %}
+            <ul class="box__todolist__todo">
+            
+                <div class="box__todolist__todo__title">
+                    <a class = "box_todolist__todo__title__link" href = "{% url 'detail' todo.pk %}">                        
+                        {{todo.title}}
+                    </a>
+                </div>
+                <div class="box__todolist__todo__detail">
+                    {{todo.detail}}
+                    
+                </div>
+                <div class="box__todolist__todo__deadline">
+
+                    {{todo.deadline}}
+                </div>
+                <div class="box__todolist__todo__timeleft">
+
+                    {{todo.timeleft}}
+                </div>
+            </ul>
+                   
+        {% endfor %}
+        </li>
+        <a class="box__create" href="{% url 'new' %}">할일 생성</a>
+    </div>
+</body>
+</html>

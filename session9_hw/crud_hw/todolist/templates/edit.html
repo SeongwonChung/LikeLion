@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'edit.css' %}">
+
+    <title>Edit</title>
+</head>
+<body>
+    <form class = "formbox" method = "POST">
+        {% csrf_token %}
+        <div class="formbox__input">
+
+            <input class="formbox__input__title" type = "text" name = "title" value = "{{todo.title}}">
+            <input class="formbox__input__detail" type = "text" name = "detail" value = "{{todo.detail}}">
+            <input class="formbox__input__deadline" type = "datetime-local" name = "deadline" value = "{{todo.deadline}}">
+        </div>
+        <div class="formbox__button">
+
+            <button type = "submit">저장하기</button>
+        </div>
+    </form>
+</body>
+</html>
