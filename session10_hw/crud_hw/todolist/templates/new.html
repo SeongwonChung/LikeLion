@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'new.css' %}">
+
+{% endblock link %}
+
+{% block title %}New task{% endblock title %}
+{% block content %}
+<form class="formbox" method = "POST">
+    {% csrf_token %}
+    <div class="formbox__input">
+        
+        <input class="formbox__input__title" type="text" name="title" placeholder = "할 일 제목">
+        <textarea class="formbox__input__detail" type = "text" name="detail" placeholder="상세 내용"></textarea>
+        <input class="formbox__input__deadline "type = "datetime-local" name = "deadline">
+    </div>
+    <div class="formbox__button">
+
+        <button type="submit"> 저장하기</button>
+    </div>
+
+</form>
+{% endblock content %}

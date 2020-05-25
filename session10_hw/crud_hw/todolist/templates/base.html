@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href=" {% static 'base.css' %}">
+    {% block link %}
+    <!-- block for css link -->
+    {% endblock link %}
+    <title>{% block title %}SW TODOLIST{% endblock title %}</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1 class="sidebar__heading">[ SW TO-DO LIST ]</h1>
+        <div class="sidebar__logo">
+            <span class="material-icons md-240">
+                assignment_turned_in
+            </span>
+        </div>
+        <nav class="sidebar__nav">
+            <a class="sidebar__nav__home" href="{% url 'home' %}">
+                <span class="material-icons md-60">
+                    home
+                </span>
+                <span class="label">home</span>
+            </a>
+            <br>
+            <a class="sidebar__nav__new" href = "{% url 'new' %}">
+                <span class="material-icons md-60">
+                    post_add
+                </span>
+                <span class="label">add task</span>
+            </a>
+        </nav>
+    </div>
+    <div class="main">
+        {% block content %}
+    
+        {% endblock content %}
+    </div>
+</body>
+</html>
