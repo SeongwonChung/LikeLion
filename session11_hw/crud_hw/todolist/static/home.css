@@ -1,0 +1,109 @@
+
+.box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 820px;
+    background-color:rgb(229,229,229);
+}
+.box__heading {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.box__todolist {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+
+    width: 700px;
+    font-size: 16px;
+
+}
+
+.box__todolist__todo {
+    display: flex;
+    align-items: center;
+
+
+    width: 700px;
+    min-height: 240px;
+
+    padding: 0px;
+    margin: 0 0 3rem 0 ;
+
+    background-color: khaki;
+}
+.box__todolist__todo__time {
+    width: 250px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-weight: 700;
+}
+.box__todolist__todo__memo {
+    width: 450px;
+    min-height:200px;
+}
+.box__todolist__todo__memo__title {
+    font-size: 20px;
+    font-weight: 700;
+    
+    padding: 10 0 10 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.author {
+    font-size:12px;
+    font-weight: 400;
+    margin-right: 20px;
+}
+.box__todolist__todo__memo__detail {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 8rem;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+}
+
+.box__todolist__todo__time__deadline {
+    background-color: rgba(114, 250, 121, 0.548);
+
+}
+
+.box__todolist__todo__time__timeleft{
+    margin-top: 10px;
+    font-style: italic;
+
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 3px double rgb(241, 87, 87);
+    border-radius: 50%;
+    background-color: antiquewhite;
+
+}
+
+.material-icons.md-alarm {
+    color: rgb(241,87,87);
+    margin-bottom: 50px;
+}

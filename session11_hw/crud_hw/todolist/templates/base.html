@@ -1,0 +1,67 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href=" {% static 'base.css' %}">
+    {% block link %}
+    <!-- block for css link -->
+    {% endblock link %}
+    <title>{% block title %}SW TODOLIST{% endblock title %}</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1 class="sidebar__heading">[ SW TO-DO LIST ]</h1>
+        {% if user.is_authenticated %}
+        <h2>안녕하세요, {{user.username}}님!</h2>
+        {% endif %}
+        <div class="sidebar__nav--login">
+            {% if user.is_authenticated %}
+            <a class= "nav__item" href = "{% url 'logout' %}">로그아웃</a>
+            {% else %}
+            <a class= "nav__item" href= "{% url 'signup' %}">회원가입</a>
+            <a class= "nav__item" href = "{% url 'login' %}">로그인</a>
+            <a class= "nav__item" href = "{% provider_login_url 'kakao' %}">카카오 로그인</a>
+            <a class= "nav__item" href = "{% provider_login_url 'google' %}">구글 로그인</a>
+            {% endif %}
+        </div>
+        <div class="sidebar__logo">
+            <span class="material-icons md-240">
+                assignment_turned_in
+            </span>
+        </div>
+        <nav class="sidebar__nav">
+            <a class="sidebar__nav__home" href="{% url 'home' %}">
+                <span class="material-icons md-60">
+                    home
+                </span>
+                <span class="label">home</span>
+            </a>
+            <br>
+            <a class="sidebar__nav__private" href="{%url 'home_private' %}">
+                <span class="material-icons md-60">
+                    visibility_off
+                </span>
+                <span class="label">private</span>
+            </a>
+            <a class="sidebar__nav__new" href = "{% url 'new' %}">
+                <span class="material-icons md-60">
+                    post_add
+                </span>
+                <span class="label">add task</span>
+            </a>
+        </nav>
+    </div>
+    <div class="main">
+        {% block content %}
+    
+        {% endblock content %}
+    </div>
+</body>
+</html>
