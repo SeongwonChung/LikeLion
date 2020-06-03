@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'edit.css' %}">
+{% endblock link %}
+
+{% block title %}Edit task{% endblock title %}
+
+{% block content %}
+<form class = "formbox" method = "POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="formbox__input">
+
+        <input class="formbox__input__title" type = "text" name = "title" value = "{{todo.title}}">
+        <input type="file" name="img" placeholder="이미지 첨부" value="{{todo.img}}">
+        <textarea class="formbox__input__detail" type = "text" name = "detail">{{todo.detail}}</textarea>
+        <input class="formbox__input__deadline" type = "datetime-local" name = "deadline" value = "{{todo.deadline}}">
+    </div>
+    <div class="formbox__button">
+
+        <button type = "submit">저장하기</button>
+    </div>
+</form>
+{% endblock content %}

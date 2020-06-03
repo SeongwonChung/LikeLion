@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'signup.css' %}">
+{% endblock link %}
+
+{% block content %}
+    <h1>로그인</h1>
+    {% if error %}
+    <h3 class = "error">{{error}}</h3>
+    {% endif %}
+    <form class = "signupForm" method="post">
+        {% csrf_token %}
+        <input class= "signupForm__input" type="text" name="username" placeholder="이름">
+        <input class= "signupForm__input" type="text" name="password" placeholder = "비밀번호">
+        <button class= "signupForm__button" type="submit">로그인</button>
+    </form>
+{% endblock content %}
