@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "now"></h1>
+
+    <script>
+        const clockContent = document.querySelector('.now')
+
+        const getTime = () => {
+            const date = new Date()//날짜 가져오기
+            
+            //get hour, minute, second
+            let h = date.getHours()
+            let m = date.getMinutes()
+            let s = date.getSeconds()
+
+            //10보다 작으면 0붙여주기
+            h = h < 10 ? '0'+ h : h
+            m = m < 10 ? '0'+ m : m
+            s = s < 10 ? '0'+ s : s
+
+            const time = h + '시 ' + m + '분 ' + s + '초 '
+            
+            //check time
+            console.log(time)
+            
+            //change text for clockContent
+            clockContent.innerText = time
+
+        }
+
+        const initTime = () => {
+            getTime();
+            setInterval(getTime, 1000)// 인자로 함수명을 받는다
+        }
+        
+        initTime();
+    </script>
+</body>
+</html>
