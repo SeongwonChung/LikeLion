@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: midnightblue;
+}
+
+#text {
+    width: 400px;
+    height: 200px;
+}
+
+.result {
+    width: 400px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.result_box {
+    margin-right: 20px;
+}
+
+.over50 {
+    color: red;
+}
