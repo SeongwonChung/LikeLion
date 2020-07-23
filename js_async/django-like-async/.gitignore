@@ -1,0 +1,3 @@
+Pipfile.lock
+.vscode
+db.sqlite3
