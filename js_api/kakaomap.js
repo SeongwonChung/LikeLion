@@ -102,11 +102,6 @@ function closeOverlay() {
     currentOverlay.setMap(null);
 }
 
-function hideOverlay(event) {
-    console.dir(event)
-    wrap = event.target.parentElement.parentElement.parentElement
-    wrap.style.display = 'none'
-}
 
 function displayOverlay(placeSet) {
     // 마커에 클릭이벤트를 등록합니다
@@ -131,14 +126,6 @@ function onKeyDown(event) {
 
         //input 비우기
         input.value = ''
-    }
-}
-
-
-function closeEvent() {
-    const closeBtn = document.querySelectorAll('.close')
-    if (closeBtn !== null) {
-        closeBtn.forEach()
     }
 }
 
